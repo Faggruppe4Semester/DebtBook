@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\App.xaml
-11892971807
+31101192275
 
-4686409100
-91476963571
-Views\MainWindow.xaml;
+10-822748367
+11-61994067
+MainWindow.xaml;Views\AddDebtView.xaml;Views\EditDebtView.xaml;
 
-False
+True
 
