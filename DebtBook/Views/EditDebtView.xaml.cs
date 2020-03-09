@@ -2,9 +2,9 @@
 
 namespace DebtBook.Views
 {
-    public partial class MainWindow : Page
+    public partial class EditDebtView : Page
     {
-        public MainWindow()
+        public EditDebtView()
         {
             InitializeComponent();
         }

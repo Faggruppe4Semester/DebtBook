@@ -14,6 +14,9 @@
         <e p="DebtBook.csproj" t="IncludeRecursive" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Debt.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="App.g.cs" t="Include" />
@@ -24,6 +27,14 @@
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="Resources.Designer.cs" t="Include" />
           <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="Utility" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="AddDebtViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="AddDebtView.xaml" t="Include" />
+          <e p="AddDebtView.xaml.cs" t="Include" />
         </e>
       </e>
       <e p="DebtBook.sln" t="IncludeFlat" />

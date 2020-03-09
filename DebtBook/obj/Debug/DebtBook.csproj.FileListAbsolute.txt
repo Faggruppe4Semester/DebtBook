@@ -1,0 +1,14 @@
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\bin\Debug\DebtBook.exe.config
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\bin\Debug\DebtBook.exe
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\bin\Debug\DebtBook.pdb
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.csprojAssemblyReference.cache
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\Views\MainWindow.g.cs
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\App.g.cs
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook_MarkupCompile.cache
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook_MarkupCompile.lref
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\Views\MainWindow.baml
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.g.resources
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.Properties.Resources.resources
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.GenerateResource.cache
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.exe
+C:\Users\TCLaptop\RiderProjects\DebtBook\DebtBook\obj\Debug\DebtBook.pdb
