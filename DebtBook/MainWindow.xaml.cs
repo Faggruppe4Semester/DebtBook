@@ -1,8 +1,9 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+
 
 namespace DebtBook.Views
 {
-    public partial class MainWindow : Page
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {

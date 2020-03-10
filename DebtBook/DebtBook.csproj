@@ -64,6 +64,7 @@
             <SubType>Code</SubType>
         </Compile>
         <Compile Include="Models\Debt.cs" />
+        <Compile Include="Models\Entry.cs" />
         <Compile Include="ViewModels\AddDebtViewModel.cs" />
         <Compile Include="ViewModels\EditDebtViewModel.cs" />
         <Compile Include="ViewModels\MainWindowViewModel.cs" />

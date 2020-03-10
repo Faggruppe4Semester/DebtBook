@@ -16,6 +16,7 @@
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Debt.cs" t="Include" />
+          <e p="Entry.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
