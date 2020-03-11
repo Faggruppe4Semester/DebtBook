@@ -4,9 +4,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:DebtBook.Views"
+        xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
         mc:Ignorable="d"
-        Title="AddDebtView" Height="450" Width="800">
+        Title="AddDebtView" Height="200" Width="200">
+    <Window.DataContext>
+        <viewModels:AddDebtViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Add Debt"
+               FontSize="20"
+               FontWeight="Medium"
+               Grid.Row="0"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Content="Name:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox MinWidth="100"
+                     VerticalAlignment="Center"
+                     Text="{Binding Path=CurrentDebt.Name}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label Content="Amount:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox MinWidth="100" 
+                     VerticalAlignment="Center"
+                     Text="{Binding Path=CurrentDebt.Amount}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button Content="Save" 
+                    Margin="5" 
+                    MinWidth="75" 
+                    VerticalAlignment="Center"
+                    IsDefault="True"
+                    Click="ButtonBase_OnClick"/>
+            <Button Content="Cancel" 
+                    Margin="5" 
+                    MinWidth="75" 
+                    VerticalAlignment="Center" 
+                    IsCancel="True"/>
+        </StackPanel>
     </Grid>
 </Window>

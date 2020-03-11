@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 
-
-namespace DebtBook.Views
+namespace DebtBook
 {
     public partial class MainWindow : Window
     {
