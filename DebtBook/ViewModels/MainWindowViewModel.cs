@@ -9,6 +9,8 @@ using DebtBook.Models;
 using DebtBook.Views;
 using Prism.Commands;
 using Prism.Mvvm;
+using DebtBook.Views;
+using System.Diagnostics;
 
 namespace DebtBook.ViewModels
 {
@@ -68,6 +70,29 @@ namespace DebtBook.ViewModels
                     }));
             }
         }
+
+
+        private ICommand _openEditDebtor;
+
+        public ICommand OpenEditDebtor
+        {
+            get
+            {
+                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
+            }
+        }
+
+        private void GetDebtExecute(Debt debtor)
+        {
+            if(debtor != null)
+            {
+                var vm = new EditDebtViewModel();
+                vm.Debtor = debtor;
+                var newView = new EditDebtView() { DataContext = vm };
+                newView.ShowDialog();
+            }
+        }
+
 
         private ICommand _loadCommand;
 

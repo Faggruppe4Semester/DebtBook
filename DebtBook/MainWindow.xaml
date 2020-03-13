@@ -48,7 +48,13 @@
                                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
             </DataGrid.Columns>
-        </DataGrid>
+            
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding OpenEditDebtor}" CommandParameter="{Binding ElementName=DebtList, Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            </DataGrid>
         </StackPanel>
         <Button Content="Add Debt"
                 MaxHeight="25"

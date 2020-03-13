@@ -1,8 +1,9 @@
 ﻿using System.Windows.Controls;
+using System.Windows;
 
 namespace DebtBook.Views
 {
-    public partial class EditDebtView : Page
+    public partial class EditDebtView : Window
     {
         public EditDebtView()
         {
