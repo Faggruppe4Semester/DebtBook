@@ -1,5 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using System.Security.Policy;
+using System.Windows.Input;
 using DebtBook.Models;
+using DebtBook.Views;
+using Prism.Commands;
 using Prism.Mvvm;
 
 namespace DebtBook.ViewModels
@@ -21,6 +25,47 @@ namespace DebtBook.ViewModels
             set => SetProperty(ref _debts, value);
 
         }
+        
+        private Debt _currentDebt;
+
+        public Debt CurrentDebt
+        {
+            get => _currentDebt;
+            set => SetProperty(ref _currentDebt, value);
+        }
+        
+        int _currentIndex = -1;
+        public int CurrentIndex
+        {
+            get => _currentIndex;
+            set => SetProperty(ref _currentIndex, value);
+        }
+        
+        #endregion
+
+        #region Commands
+
+        private ICommand _addDebtCommand;
+
+        public ICommand AddDebtCommand
+        {
+            get
+            {
+                return _addDebtCommand ?? (_addDebtCommand = new DelegateCommand(() =>
+                    {
+                        var newDebt = new Debt();
+                        var vm = new AddDebtViewModel("Add debt", newDebt);
+                        var dlg = new AddDebtView {DataContext = vm};
+                        if (dlg.ShowDialog() == true)
+                        {
+                            Debts.Add(newDebt);
+                            CurrentDebt = newDebt;
+                        }
+                    },
+                    () => CurrentIndex >= 0).ObservesProperty(()=> CurrentIndex));
+            }
+        }
+
         #endregion
     }
 

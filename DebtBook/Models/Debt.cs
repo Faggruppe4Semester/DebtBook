@@ -7,6 +7,10 @@ namespace DebtBook.Models
 {
     public class Debt : BindableBase
     {
+        public Debt()
+        {
+            
+        }
         public Debt(string name, int amount)
         {
             Name = name;
@@ -16,6 +20,10 @@ namespace DebtBook.Models
         private string _name;
         private int _amount;
 
+        public Debt Clone()
+        {
+            return this.MemberwiseClone() as Debt;
+        }
         public string Name
         {
             get => _name;

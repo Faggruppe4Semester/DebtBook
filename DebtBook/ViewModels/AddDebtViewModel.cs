@@ -7,11 +7,21 @@ namespace DebtBook.ViewModels
     public class AddDebtViewModel : BindableBase
     {
 
-
+        public AddDebtViewModel(string title, Debt debt)
+        {
+            Title = title;
+            CurrentDebt = debt;
+        }
         #region Properties
-
+        
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+        
         private Debt _currentDebt;
-
         public Debt CurrentDebt
         {
             get => _currentDebt;
