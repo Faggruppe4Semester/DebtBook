@@ -1,6 +1,10 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Security.Policy;
+using System.Windows;
 using System.Windows.Input;
+using System.Xml.Serialization;
 using DebtBook.Models;
 using DebtBook.Views;
 using Prism.Commands;
@@ -67,6 +71,7 @@ namespace DebtBook.ViewModels
             }
         }
 
+<<<<<<< HEAD
 
         private ICommand _openEditDebtor;
 
@@ -89,6 +94,54 @@ namespace DebtBook.ViewModels
             }
         }
 
+=======
+        private ICommand _loadCommand;
+
+        public ICommand LoadCommand
+        {
+            get => _loadCommand ?? (_loadCommand = new DelegateCommand(LoadHandlerExecute));
+        }
+
+        void LoadHandlerExecute()
+        {
+            var tempDepts = new ObservableCollection<Debt>();
+
+            XmlSerializer x = new XmlSerializer(typeof(ObservableCollection<Debt>));
+
+            try
+            {
+                TextReader reader = new StreamReader("DeptSave.txt");
+                tempDepts = (ObservableCollection<Debt>) x.Deserialize(reader);
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Unable to open saved data", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            Debts.Clear();
+            foreach (var dept in tempDepts)
+            {
+                Debts.Add(dept);
+            }
+
+            CurrentIndex = 0;
+        }
+
+        private ICommand _saveCommand;
+
+        public ICommand SaveCommand
+        {
+            get => _saveCommand ?? (_saveCommand = new DelegateCommand(SaveHandlerExecute));
+        }
+
+        void SaveHandlerExecute()
+        {
+            XmlSerializer x = new XmlSerializer(typeof(ObservableCollection<Debt>));
+            TextWriter writer = new StreamWriter("DeptSave.txt");
+            x.Serialize(writer,Debts);
+            writer.Close();
+        }
+>>>>>>> 337c99b3c2e95d03a8caa129b83e28b72fb6c376
 
         #endregion
     }
