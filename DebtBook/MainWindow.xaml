@@ -24,8 +24,8 @@
                   AutoGenerateColumns="False"
                   ItemsSource="{Binding Path=Debts}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding Path=Amount}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="120"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding Path=Amount}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
         </StackPanel>

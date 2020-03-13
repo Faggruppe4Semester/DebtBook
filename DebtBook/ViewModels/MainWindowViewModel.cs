@@ -61,8 +61,7 @@ namespace DebtBook.ViewModels
                             Debts.Add(newDebt);
                             CurrentDebt = newDebt;
                         }
-                    },
-                    () => CurrentIndex >= 0).ObservesProperty(()=> CurrentIndex));
+                    }));
             }
         }
 

@@ -6,7 +6,10 @@ namespace DebtBook.ViewModels
 {
     public class AddDebtViewModel : BindableBase
     {
-
+        public AddDebtViewModel()
+        {
+            
+        }
         public AddDebtViewModel(string title, Debt debt)
         {
             Title = title;
@@ -29,7 +32,7 @@ namespace DebtBook.ViewModels
         }
 
         private bool _isValid;
-
+        
         public bool IsValid
         {
             get
