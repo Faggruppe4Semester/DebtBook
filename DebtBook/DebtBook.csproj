@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="Models\Debt.cs" />
     <Compile Include="Models\Entry.cs" />
+    <Compile Include="Utility\ValueConverter.cs" />
     <Compile Include="ViewModels\AddDebtViewModel.cs" />
     <Compile Include="ViewModels\EditDebtViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -113,6 +114,9 @@
     <Page Include="MainWindow.xaml" />
     <Page Include="Views\AddDebtView.xaml" />
     <Page Include="Views\EditDebtView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="save.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

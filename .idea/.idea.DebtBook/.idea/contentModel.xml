@@ -20,7 +20,6 @@
           <e p="Debug" t="Include">
             <e p="App.g.cs" t="Include" />
             <e p="GeneratedInternalTypeHelper.g.cs" t="Include" />
-            <e p="MainWindow.g.cs" t="Include" />
             <e p="Views" t="Include">
               <e p="AddDebtView.g.cs" t="Include" />
               <e p="EditDebtView.g.cs" t="Include" />

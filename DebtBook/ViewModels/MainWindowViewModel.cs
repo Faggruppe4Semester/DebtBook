@@ -71,36 +71,6 @@ namespace DebtBook.ViewModels
             }
         }
 
-<<<<<<< HEAD
-
-        private ICommand _openEditDebtor;
-
-        public ICommand OpenEditDebtor
-        {
-            get
-            {
-                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
-            }
-        }
-
-        private void GetDebtExecute(Debt debtor)
-        {
-            if(debtor != null)
-            {
-                var vm = new EditDebtViewModel();
-                vm.Debtor = debtor;
-                var newView = new EditDebtView() { DataContext = vm };
-                newView.ShowDialog();
-            }
-        }
-
-=======
-        private ICommand _loadCommand;
-
-        public ICommand LoadCommand
-        {
-            get => _loadCommand ?? (_loadCommand = new DelegateCommand(LoadHandlerExecute));
-        }
 
         void LoadHandlerExecute()
         {
@@ -141,7 +111,37 @@ namespace DebtBook.ViewModels
             x.Serialize(writer,Debts);
             writer.Close();
         }
->>>>>>> 337c99b3c2e95d03a8caa129b83e28b72fb6c376
+
+
+        private ICommand _openEditDebtor;
+
+        public ICommand OpenEditDebtor
+        {
+            get
+            {
+                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
+            }
+        }
+
+        private void GetDebtExecute(Debt debtor)
+        {
+            if(debtor != null)
+            {
+                var vm = new EditDebtViewModel();
+                vm.Debtor = debtor;
+                var newView = new EditDebtView() { DataContext = vm };
+                newView.ShowDialog();
+            }
+        }
+
+
+        private ICommand _loadCommand;
+
+        public ICommand LoadCommand
+        {
+            get => _loadCommand ?? (_loadCommand = new DelegateCommand(LoadHandlerExecute));
+        }
+
 
         #endregion
     }
