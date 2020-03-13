@@ -71,29 +71,7 @@ namespace DebtBook.ViewModels
             }
         }
 
-
-        private ICommand _openEditDebtor;
-
-        public ICommand OpenEditDebtor
-        {
-            get
-            {
-                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
-            }
-        }
-
-        private void GetDebtExecute(Debt debtor)
-        {
-            if(debtor != null)
-            {
-                var vm = new EditDebtViewModel();
-                vm.Debtor = debtor;
-                var newView = new EditDebtView() { DataContext = vm };
-                newView.ShowDialog();
-            }
-        }
-
-
+<<<<<<<<< Temporary merge branch 1
         private ICommand _loadCommand;
 
         public ICommand LoadCommand
@@ -140,6 +118,30 @@ namespace DebtBook.ViewModels
             x.Serialize(writer,Debts);
             writer.Close();
         }
+=========
+
+        private ICommand _openEditDebtor;
+
+        public ICommand OpenEditDebtor
+        {
+            get
+            {
+                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
+            }
+        }
+
+        private void GetDebtExecute(Debt debtor)
+        {
+            if(debtor != null)
+            {
+                var vm = new EditDebtViewModel();
+                vm.Debtor = debtor;
+                var newView = new EditDebtView() { DataContext = vm };
+                newView.ShowDialog();
+            }
+        }
+
+>>>>>>>>> Temporary merge branch 2
 
         #endregion
     }
