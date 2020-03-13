@@ -639,3 +639,27 @@ fabric.properties
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # End of https://www.gitignore.io/api/rider,csharp,jetbrains,visualstudio
+DebtBook/bin/Debug/DebtBook.exe
+DebtBook/bin/Debug/DebtBook.pdb
+DebtBook/obj/Debug/App.g.cs
+DebtBook/obj/Debug/App.g.i.cs
+DebtBook/obj/Debug/DebtBook.csproj.FileListAbsolute.txt
+DebtBook/obj/Debug/DebtBook.csproj.GenerateResource.cache
+DebtBook/obj/Debug/DebtBook.csprojAssemblyReference.cache
+DebtBook/obj/Debug/DebtBook.exe
+DebtBook/obj/Debug/DebtBook.g.resources
+DebtBook/obj/Debug/DebtBook.pdb
+DebtBook/obj/Debug/DebtBook_MarkupCompile.cache
+DebtBook/obj/Debug/DebtBook_MarkupCompile.lref
+DebtBook/obj/Debug/GeneratedInternalTypeHelper.g.cs
+DebtBook/obj/Debug/GeneratedInternalTypeHelper.g.i.cs
+DebtBook/obj/Debug/MainWindow.baml
+DebtBook/obj/Debug/MainWindow.g.cs
+DebtBook/obj/Debug/MainWindow.g.i.cs
+DebtBook/obj/Debug/Views/AddDebtView.baml
+DebtBook/obj/Debug/Views/AddDebtView.g.cs
+DebtBook/obj/Debug/Views/AddDebtView.g.i.cs
+DebtBook/obj/Debug/Views/EditDebtView.baml
+DebtBook/obj/Debug/Views/EditDebtView.g.cs
+DebtBook/obj/Debug/Views/EditDebtView.g.i.cs
+DebtBook/packages.config

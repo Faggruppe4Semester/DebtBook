@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       mc:Ignorable="d"
       Title="MainWindow" Height="400" Width="400">
     <Window.DataContext>
@@ -18,7 +19,8 @@
         <Label Content="The Debt Book"
                FontSize="24"
                FontWeight="Medium"/>
-        <DataGrid IsReadOnly="True"
+        <DataGrid Name="DebtList"
+                  IsReadOnly="True"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   AutoGenerateColumns="False"
@@ -27,7 +29,13 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="120"/>
                 <DataGridTextColumn Header="Amount" Binding="{Binding Path=Amount}" Width="Auto"/>
             </DataGrid.Columns>
-        </DataGrid>
+            
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding OpenEditDebtor}" CommandParameter="{Binding ElementName=DebtList, Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            </DataGrid>
         </StackPanel>
         <Button Content="Add Debt"
                 MaxHeight="25"
