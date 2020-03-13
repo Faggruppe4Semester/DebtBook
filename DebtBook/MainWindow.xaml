@@ -3,10 +3,20 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
       mc:Ignorable="d"
-      Title="MainWindow" Height="400" Width="400"
-      >
+      Title="MainWindow" Height="400" Width="400">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding SaveCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
     <Window.DataContext>
         <viewModels:MainWindowViewModel></viewModels:MainWindowViewModel>
     </Window.DataContext>

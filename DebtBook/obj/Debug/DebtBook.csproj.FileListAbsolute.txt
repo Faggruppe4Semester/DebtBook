@@ -73,3 +73,8 @@ C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.Gene
 C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.CopyComplete
 C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\obj\Debug\DebtBook.exe
 C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\obj\Debug\DebtBook.pdb
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\bin\Debug\CommonServiceLocator.dll
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\bin\Debug\Prism.Wpf.dll
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\bin\Debug\Prism.Wpf.pdb
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\bin\Debug\Prism.Wpf.xml

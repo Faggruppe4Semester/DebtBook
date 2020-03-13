@@ -6,6 +6,7 @@ namespace DebtBook.Models
 {
     public class Entry : BindableBase
     {
+        public Entry() { }
         public Entry(DateTime date, int amount)
         {
             Date = date;

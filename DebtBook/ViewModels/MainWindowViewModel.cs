@@ -101,6 +101,21 @@ namespace DebtBook.ViewModels
             CurrentIndex = 0;
         }
 
+        private ICommand _saveCommand;
+
+        public ICommand SaveCommand
+        {
+            get => _saveCommand ?? (_saveCommand = new DelegateCommand(SaveHandlerExecute));
+        }
+
+        void SaveHandlerExecute()
+        {
+            XmlSerializer x = new XmlSerializer(typeof(ObservableCollection<Debt>));
+            TextWriter writer = new StreamWriter("DeptSave.txt");
+            x.Serialize(writer,Debts);
+            writer.Close();
+        }
+
         #endregion
     }
 
