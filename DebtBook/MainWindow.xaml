@@ -40,13 +40,14 @@
                 CanUserAddRows="False"
                 CanUserDeleteRows="False"
                 AutoGenerateColumns="False"
-                ItemsSource="{Binding Path=Debts}">
+                ItemsSource="{Binding Path=Debts}"
+                SelectedItem="{Binding CurrentDebt}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="120"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="Auto">
+                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount}" Width="Auto">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="TextBlock">
-                                            <Setter Property="Foreground" Value="{Binding Amount, Converter={StaticResource ValueConverter}}"/>
+                                            <Setter Property="Foreground" Value="{Binding TotalAmount, Converter={StaticResource ValueConverter}}"/>
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>

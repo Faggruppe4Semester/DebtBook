@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
+using DebtBook.ViewModels;
 
 namespace DebtBook.Views
 {
@@ -8,6 +9,13 @@ namespace DebtBook.Views
         public EditDebtView()
         {
             InitializeComponent();
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as EditDebtViewModel;
+            DialogResult = true;
+           
         }
     }
 }

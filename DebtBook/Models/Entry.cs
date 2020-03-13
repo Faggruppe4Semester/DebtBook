@@ -7,15 +7,15 @@ namespace DebtBook.Models
     public class Entry : BindableBase
     {
         public Entry() { }
-        public Entry(DateTime date, int amount)
+        public Entry(string date, int amount)
         {
             Date = date;
             Amount = amount;
         }
-        private DateTime _date;
+        private string _date;
         private int _amount;
 
-        public DateTime Date
+        public string Date
         {
             get => _date;
             set => SetProperty(ref _date, value);

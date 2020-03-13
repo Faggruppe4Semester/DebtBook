@@ -119,19 +119,19 @@ namespace DebtBook.ViewModels
         {
             get
             {
-                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand<Debt>(GetDebtExecute));
+                return _openEditDebtor ?? (_openEditDebtor = new DelegateCommand(GetDebtExecute));
             }
         }
 
-        private void GetDebtExecute(Debt debtor)
+        private void GetDebtExecute()
         {
-            if(debtor != null)
-            {
-                var vm = new EditDebtViewModel();
-                vm.Debtor = debtor;
-                var newView = new EditDebtView() { DataContext = vm };
-                newView.ShowDialog();
-            }
+                var tempDebtor = CurrentDebt.Clone();
+                var vm = new EditDebtViewModel("Edit debtor", tempDebtor);
+                var dlg = new EditDebtView() { DataContext = vm, Owner = App.Current.MainWindow};
+                if (dlg.ShowDialog() == true)
+                {
+                    CurrentDebt.Entries = tempDebtor.Entries;
+                }
         }
 
 

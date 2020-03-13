@@ -6,13 +6,51 @@
       xmlns:local="clr-namespace:DebtBook.Views"
       xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
       mc:Ignorable="d"
-      Title="EditDebtView" Height="450" Width="800">
+      Title="EditDebtView" Height="300" Width="320">
     <Window.DataContext>
         <viewModels:EditDebtViewModel></viewModels:EditDebtViewModel>
     </Window.DataContext>
 
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="228"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+        <DataGrid HorizontalAlignment="Left" 
+                  Margin="10,10,0,0" 
+                  VerticalAlignment="Top"
+                  Width="200"
+                  Height="150"
+                  ItemsSource="{Binding Entries}"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False">
+        </DataGrid>
+        <Button Content="Save"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                MinWidth="50"
+                Margin="5"
+                IsDefault="True"
+                Click="ButtonBase_OnClick"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            
+                <Label Content="Amount:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox MinWidth="75" 
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         Text="{Binding Path=Amount}"
+                         Margin="5"/>
+            
+            <Button Content="Add Debt"
+                    MaxHeight="25"
+                    MaxWidth="100"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="5"
+                    Command="{Binding AddEntryCommand}"/>
+        </StackPanel>        
     </Grid>
 </Window>
