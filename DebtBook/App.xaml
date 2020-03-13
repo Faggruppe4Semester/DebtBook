@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:DebtBook"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+         <SolidColorBrush x:Key="BackgroundSwag">DarkGreen</SolidColorBrush>
     </Application.Resources>
 </Application>

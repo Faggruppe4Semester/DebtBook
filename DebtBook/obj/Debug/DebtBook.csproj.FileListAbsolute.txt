@@ -48,3 +48,4 @@ C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.GenerateReso
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.CopyComplete
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.exe
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.pdb
+C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\App.baml
