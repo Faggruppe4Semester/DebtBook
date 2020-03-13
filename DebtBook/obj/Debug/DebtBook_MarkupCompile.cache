@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\obj\Debug\
 DebtBook
 none
 false
 DEBUG;TRACE
-C:\Users\tcars\Projects\DebtBook\DebtBook\App.xaml
+C:\Users\frede\Documents\GitHub\DebtBook\DebtBook\App.xaml
 31101192275
 
 119079078
-11729214624
+11-1710844772
 MainWindow.xaml;Views\AddDebtView.xaml;Views\EditDebtView.xaml;
 
 False
