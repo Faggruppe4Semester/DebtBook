@@ -3,11 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
       xmlns:utility="clr-namespace:DebtBook.Utility"
       mc:Ignorable="d"
-      Title="MainWindow" Height="400" Width="400">
+      Title="MainWindow" Height="400" Width="400"
+      Background="{StaticResource BackgroundBrush}">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -33,11 +34,13 @@
                FontSize="24"
                FontWeight="Medium"
                Style="{StaticResource LabelStyle}"/>
-        <DataGrid IsReadOnly="True"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  AutoGenerateColumns="False"
-                  ItemsSource="{Binding Path=Debts}">
+        <DataGrid
+                Name="DebtList"
+                IsReadOnly="True"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                AutoGenerateColumns="False"
+                ItemsSource="{Binding Path=Debts}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="120"/>
                 <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="Auto">
