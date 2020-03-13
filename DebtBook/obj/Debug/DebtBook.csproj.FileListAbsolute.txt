@@ -49,3 +49,8 @@ C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.csproj.CopyComplete
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.exe
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\DebtBook.pdb
 C:\Users\tcars\Projects\DebtBook\DebtBook\obj\Debug\App.baml
+C:\Users\tcars\Projects\DebtBook\DebtBook\bin\Debug\CommonServiceLocator.dll
+C:\Users\tcars\Projects\DebtBook\DebtBook\bin\Debug\Prism.Wpf.dll
+C:\Users\tcars\Projects\DebtBook\DebtBook\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\tcars\Projects\DebtBook\DebtBook\bin\Debug\Prism.Wpf.pdb
+C:\Users\tcars\Projects\DebtBook\DebtBook\bin\Debug\Prism.Wpf.xml

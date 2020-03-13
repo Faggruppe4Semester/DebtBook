@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:viewModels="clr-namespace:DebtBook.ViewModels"
       mc:Ignorable="d"
-      Title="MainWindow" Height="400" Width="400">
+      Title="MainWindow" Height="400" Width="400"
+      Background="{StaticResource BackgroundSwag}">
     <Window.DataContext>
         <viewModels:MainWindowViewModel></viewModels:MainWindowViewModel>
     </Window.DataContext>
@@ -17,7 +18,8 @@
         <StackPanel Grid.Column="0">
         <Label Content="The Debt Book"
                FontSize="24"
-               FontWeight="Medium"/>
+               FontWeight="Medium"
+               Style="{StaticResource LabelStyle}"/>
         <DataGrid IsReadOnly="True"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
@@ -35,6 +37,7 @@
                 Grid.Column="1"
                 VerticalAlignment="Top"
                 Margin="10"
-                Command="{Binding AddDebtCommand}"/>
+                Command="{Binding AddDebtCommand}"
+                Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </Window>
