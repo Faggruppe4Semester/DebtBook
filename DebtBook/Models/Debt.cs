@@ -15,7 +15,7 @@ namespace DebtBook.Models
         {
             Name = name;
             Amount = amount;
-            Entries.Add(new Entry("03.03.2020", amount));
+            Entries.Add(new Entry(DateTime.Today.ToShortDateString(), Amount));
         }
         private string _name;
         private int _amount;
@@ -33,18 +33,14 @@ namespace DebtBook.Models
         public int Amount
         {
             get => _amount;
-            set
-            {
-                TotalAmount = CalcAmount();
-                SetProperty(ref _amount, value);
-            }
+            set => SetProperty(ref _amount, value);
         }
 
         private int _totalAmount;
 
         public int TotalAmount
         {
-            get => _totalAmount;
+            get => CalcAmount();
             set => SetProperty(ref _totalAmount, value);
         }
 

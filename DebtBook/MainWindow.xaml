@@ -45,11 +45,11 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="120"/>
                 <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount}" Width="Auto">
-                                    <DataGridTextColumn.ElementStyle>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="Foreground" Value="{Binding TotalAmount, Converter={StaticResource ValueConverter}}"/>
-                                        </Style>
-                                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="{Binding TotalAmount, Converter={StaticResource ValueConverter}}"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
             </DataGrid.Columns>
             

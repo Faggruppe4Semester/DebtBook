@@ -27,7 +27,7 @@
                   CanUserAddRows="False"
                   CanUserDeleteRows="False">
         </DataGrid>
-        <Button Content="Save"
+        <Button Content="Close"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 MinWidth="50"

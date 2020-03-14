@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Security.Policy;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml.Serialization;
@@ -9,8 +8,6 @@ using DebtBook.Models;
 using DebtBook.Views;
 using Prism.Commands;
 using Prism.Mvvm;
-using DebtBook.Views;
-using System.Diagnostics;
 
 namespace DebtBook.ViewModels
 {
@@ -61,11 +58,12 @@ namespace DebtBook.ViewModels
                     {
                         var newDebt = new Debt();
                         var vm = new AddDebtViewModel("Add debt", newDebt);
-                        var dlg = new AddDebtView {DataContext = vm};
+                        var dlg = new AddDebtView {DataContext = vm, Owner = App.Current.MainWindow};
                         if (dlg.ShowDialog() == true)
                         {
-                            Debts.Add(newDebt);
-                            CurrentDebt = newDebt;
+                            var tempDebt = new Debt(newDebt.Name, newDebt.Amount);
+                            Debts.Add(tempDebt);
+                            CurrentDebt = tempDebt;
                         }
                     }));
             }
@@ -131,6 +129,7 @@ namespace DebtBook.ViewModels
                 if (dlg.ShowDialog() == true)
                 {
                     CurrentDebt.Entries = tempDebtor.Entries;
+                    CurrentDebt.TotalAmount = tempDebtor.TotalAmount;
                 }
         }
 
