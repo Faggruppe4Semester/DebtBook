@@ -55,7 +55,7 @@ namespace DebtBook.ViewModels
         {
             get { return _addEntryCommand ?? (_addEntryCommand = new DelegateCommand(() =>
             {
-                Entries.Add(new Entry(DateTime.Today.ToLongDateString(), Amount));
+                Entries.Add(new Entry(DateTime.Today.ToShortDateString(), Amount));
             })); }
         }
     }
